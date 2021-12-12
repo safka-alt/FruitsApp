@@ -167,7 +167,8 @@ private static final String URL = "https://www.fruityvice.com";
             HttpResponse<String> httpResponse = HttpClient.newHttpClient()
                     .send(httpRequest, HttpResponse.BodyHandlers.ofString());
 
-
+            JSONArray jsonArrayq = new JSONArray(httpResponse.body());
+            //JSONArray jsonArray = new JSONArray(httpResponse.body());
             JSONArray jsonArray = new JSONArray(httpResponse.body());
             jsonArray.iterator().forEachRemaining(s->
             {
